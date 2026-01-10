@@ -17,6 +17,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "ATRUM_TOKEN | Decentralized Commodity Trading",
   description: "Stake ATRUM, Earn Rewards from Gold & Silver Forex Markets — No Middlemen.",
+  icons: {
+    icon: '/logo.jpg',
+    shortcut: '/logo.jpg',
+    apple: '/logo.jpg',
+  },
 };
 
 export default function RootLayout({
