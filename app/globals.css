@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme {
+  --color-atrum-dark-start: #060B3D;
+  --color-atrum-dark-end: #0A1B60;
+  --color-atrum-blue: #1A9FFF;
+  --color-atrum-blue-light: #3BD4FF;
+  --color-atrum-cyan: #82E9FF;
+  --color-atrum-silver: #C0C6D8;
+  --color-atrum-silver-light: #F0F0F7;
+  --color-atrum-pink: #FF3FB7;
+  --color-atrum-purple: #D94EFF;
+
+  --font-display: var(--font-orbitron), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes pulse-slow {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px var(--color-atrum-blue), 0 0 20px var(--color-atrum-blue);
+    }
+
+    to {
+      box-shadow: 0 0 20px var(--color-atrum-cyan), 0 0 30px var(--color-atrum-cyan);
+    }
+  }
+
+  --animate-shake: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+  --animate-spin-slow: spin-slow 8s linear infinite;
+
+  @keyframes shake {
+
+    10%,
+    90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+:root {
+  --background: #060B3D;
+  --foreground: #F0F0F7;
+}
+
+body {
+  background: linear-gradient(to bottom right, var(--color-atrum-dark-start), var(--color-atrum-dark-end));
+  color: var(--foreground);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(130, 233, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(6, 11, 61, 0.37);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--color-atrum-blue), var(--color-atrum-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-silver {
+  background: linear-gradient(to right, var(--color-atrum-silver), var(--color-atrum-silver-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-pink {
+  background: linear-gradient(to right, var(--color-atrum-pink), var(--color-atrum-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
