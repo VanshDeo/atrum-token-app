@@ -5,6 +5,9 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X, Copy, Check } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Orbitron } from "next/font/google";
+
+const orbitron = Orbitron({ subsets: ["latin"], weight: ["400", "700", "900"], variable: "--font-orbitron" });
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -39,16 +42,18 @@ export default function Navbar() {
                             className="object-cover"
                         />
                     </div>
-                    <span className="font-display font-bold text-xl sm:text-2xl tracking-widest text-white drop-shadow-[0_0_10px_rgba(26,159,255,0.5)]">
-                        ATRUM<span className="text-atrum-blue">_TOKEN</span>
+                    <span className={`font-orbitron font-bold text-xl sm:text-2xl tracking-widest text-white ${orbitron.className} drop-shadow-[0_0_10px_rgba(26,159,255,0.5)]`}>
+                        ATRUM<span className="text-atrum-blue"></span>
                     </span>
                 </Link>
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-8">
-                    <Link href="#about" className="text-atrum-silver hover:text-white hover:drop-shadow-[0_0_5px_rgba(130,233,255,0.8)] transition-all duration-300 text-sm uppercase tracking-widest">About</Link>
-                    <Link href="#tokenomics" className="text-atrum-silver hover:text-white hover:drop-shadow-[0_0_5px_rgba(130,233,255,0.8)] transition-all duration-300 text-sm uppercase tracking-widest">Tokenomics</Link>
-                    <Link href="#roadmap" className="text-atrum-silver hover:text-white hover:drop-shadow-[0_0_5px_rgba(130,233,255,0.8)] transition-all duration-300 text-sm uppercase tracking-widest">Roadmap</Link>
+                    <Link href="/how-it-works" className="text-atrum-silver hover:text-white hover:drop-shadow-[0_0_5px_rgba(130,233,255,0.8)] transition-all duration-300 text-sm uppercase tracking-widest">How It Works</Link>
+                    <Link href="/tokenomics" className="text-atrum-silver hover:text-white hover:drop-shadow-[0_0_5px_rgba(130,233,255,0.8)] transition-all duration-300 text-sm uppercase tracking-widest">Tokenomics</Link>
+                    <Link href="/earn-rewards" className="text-atrum-silver hover:text-white hover:drop-shadow-[0_0_5px_rgba(130,233,255,0.8)] transition-all duration-300 text-sm uppercase tracking-widest">Rewards</Link>
+                    <Link href="/wallet-utility" className="text-atrum-silver hover:text-white hover:drop-shadow-[0_0_5px_rgba(130,233,255,0.8)] transition-all duration-300 text-sm uppercase tracking-widest">Utility</Link>
+                    <Link href="/vision-roadmap" className="text-atrum-silver hover:text-white hover:drop-shadow-[0_0_5px_rgba(130,233,255,0.8)] transition-all duration-300 text-sm uppercase tracking-widest">Roadmap</Link>
                     <Link href="/whitepaper" className="px-6 py-2 rounded-full border border-atrum-pink/50 text-atrum-pink hover:bg-atrum-pink hover:text-white hover:shadow-[0_0_20px_rgba(255,63,183,0.6)] transition-all duration-300 text-sm uppercase tracking-widest font-bold">
                         Whitepaper
                     </Link>
@@ -75,9 +80,11 @@ export default function Navbar() {
                         exit={{ opacity: 0, y: -20 }}
                         className="absolute top-[calc(100%_-_1px)] left-0 w-full glass flex flex-col items-center py-8 gap-6 md:hidden z-40"
                     >
-                        <Link href="#about" onClick={() => setIsOpen(false)} className="text-atrum-silver hover:text-white text-lg uppercase tracking-widest">About</Link>
-                        <Link href="#tokenomics" onClick={() => setIsOpen(false)} className="text-atrum-silver hover:text-white text-lg uppercase tracking-widest">Tokenomics</Link>
-                        <Link href="#roadmap" onClick={() => setIsOpen(false)} className="text-atrum-silver hover:text-white text-lg uppercase tracking-widest">Roadmap</Link>
+                        <Link href="/how-it-works" onClick={() => setIsOpen(false)} className="text-atrum-silver hover:text-white text-lg uppercase tracking-widest">How It Works</Link>
+                        <Link href="/tokenomics" onClick={() => setIsOpen(false)} className="text-atrum-silver hover:text-white text-lg uppercase tracking-widest">Tokenomics</Link>
+                        <Link href="/earn-rewards" onClick={() => setIsOpen(false)} className="text-atrum-silver hover:text-white text-lg uppercase tracking-widest">Rewards</Link>
+                        <Link href="/wallet-utility" onClick={() => setIsOpen(false)} className="text-atrum-silver hover:text-white text-lg uppercase tracking-widest">Utility</Link>
+                        <Link href="/vision-roadmap" onClick={() => setIsOpen(false)} className="text-atrum-silver hover:text-white text-lg uppercase tracking-widest">Roadmap</Link>
                         <Link href="/whitepaper" onClick={() => setIsOpen(false)} className="text-atrum-pink font-bold text-lg uppercase tracking-widest">Whitepaper</Link>
                         <button className="px-8 py-3 rounded-full bg-linear-to-r from-atrum-blue to-atrum-cyan text-black font-bold shadow-[0_0_20px_rgba(130,233,255,0.5)] uppercase tracking-widest">
                             Buy Token

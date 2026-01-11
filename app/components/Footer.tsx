@@ -74,6 +74,7 @@ export default function Footer() {
                     <div className="flex gap-6 mt-4 sm:mt-0">
                         <a href="#" className="hover:text-atrum-silver">Privacy Policy</a>
                         <a href="#" className="hover:text-atrum-silver">Terms of Service</a>
+                        <a href="/tokenomics" className="hover:text-atrum-silver text-atrum-cyan">Tokenomics</a>
                     </div>
 
                     <motion.button
