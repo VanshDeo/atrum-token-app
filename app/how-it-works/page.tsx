@@ -273,9 +273,30 @@ export default function HowItWorksPage() {
 
                 <div className="space-y-4">
                     {[
-                        { q: "Is it free to use?", a: "Yes! Creating an account and downloading content is 100% free." },
-                        { q: "How do I get paid?", a: "Tokens are automatically credited to your in-app wallet after each verified action." },
-                        { q: "Can I use any video link?", a: "We support major public social media platforms. Private links may not work." }
+                        {
+                            q: "Is it free to use?",
+                            a: "Yes! Creating an account and downloading content on Atrum is completely free. We believe users should earn value from their daily actions, so we never charge for basic access or downloads—instead, we reward you for participating in the ecosystem."
+                        },
+                        {
+                            q: "How do I get paid?",
+                            a: "Tokens are automatically credited to your built-in non-custodial wallet immediately after each valid action. Our system verifies your download or engagement in real-time on the blockchain, ensuring you receive your rewards instantly without any manual claim steps."
+                        },
+                        {
+                            q: "Can I use any video link?",
+                            a: "We widely support public links from major platforms like Instagram, TikTok, YouTube Shorts, and Facebook. Simply paste the public URL, and our system will detect the media type to process your high-quality download while ignoring private or restricted content."
+                        },
+                        {
+                            q: "How does the built-in wallet work?",
+                            a: "Atrum features a secure, non-custodial wallet designed for both beginners and crypto experts. It allows you to store and view your earnings safely, and in future updates, you'll be able to connect external wallets like MetaMask for complete control and flexibility over your assets."
+                        },
+                        {
+                            q: "Is my personal data secure?",
+                            a: "Absolutely. Privacy is our core foundation; we do not store your downloaded media or require unnecessary social media logins. We allow you to interact with content securely using encrypted data handling, ensuring your digital footprint remains private and protected at all times."
+                        },
+                        {
+                            q: "What can I use Atrum Tokens for?",
+                            a: "Atrum Tokens are functional utility assets, not just rewards. You can use them to unlock premium benefits like 4K resolution downloads, faster processing speeds, and higher daily limits, with future expansions into creator tools and partner platform services."
+                        }
                     ].map((faq, i) => (
                         <motion.details
                             key={i}

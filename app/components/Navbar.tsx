@@ -9,9 +9,12 @@ import { Orbitron } from "next/font/google";
 
 const orbitron = Orbitron({ subsets: ["latin"], weight: ["400", "700", "900"], variable: "--font-orbitron" });
 
+import { usePathname } from "next/navigation";
+
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [copied, setCopied] = useState(false);
+    const pathname = usePathname();
     const contractAddress = "0x7c41b1cB7E221885Fb1786805F48794D0E55fA08";
 
     const copyToClipboard = () => {
@@ -20,8 +23,18 @@ export default function Navbar() {
         setTimeout(() => setCopied(false), 2000);
     };
 
+    const isActive = (path: string) => pathname === path;
+
+    const navLinks = [
+        { href: "/how-it-works", label: "How It Works" },
+        { href: "/tokenomics", label: "Tokenomics" },
+        { href: "/earn-rewards", label: "Rewards" },
+        { href: "/wallet-utility", label: "Utility" },
+        { href: "/vision-roadmap", label: "Roadmap" },
+    ];
+
     return (
-        <div className="fixed top-0 left-0 right-0 z-50 flex flex-col items-center w-full">
+        <div className="absolute top-0 left-0 right-0 z-50 flex flex-col items-center w-full">
             {/* Contract Address Bar */}
             <div className="w-full bg-linear-to-r from-atrum-dark-start to-atrum-blue/20 backdrop-blur-md border-b border-atrum-blue/10 py-2 text-center text-xs sm:text-sm text-atrum-silver tracking-wider shadow-lg z-51">
                 <span className="opacity-70 mr-2">Contract Address:</span>
@@ -49,11 +62,19 @@ export default function Navbar() {
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-8">
-                    <Link href="/how-it-works" className="text-atrum-silver hover:text-white hover:drop-shadow-[0_0_5px_rgba(130,233,255,0.8)] transition-all duration-300 text-sm uppercase tracking-widest">How It Works</Link>
-                    <Link href="/tokenomics" className="text-atrum-silver hover:text-white hover:drop-shadow-[0_0_5px_rgba(130,233,255,0.8)] transition-all duration-300 text-sm uppercase tracking-widest">Tokenomics</Link>
-                    <Link href="/earn-rewards" className="text-atrum-silver hover:text-white hover:drop-shadow-[0_0_5px_rgba(130,233,255,0.8)] transition-all duration-300 text-sm uppercase tracking-widest">Rewards</Link>
-                    <Link href="/wallet-utility" className="text-atrum-silver hover:text-white hover:drop-shadow-[0_0_5px_rgba(130,233,255,0.8)] transition-all duration-300 text-sm uppercase tracking-widest">Utility</Link>
-                    <Link href="/vision-roadmap" className="text-atrum-silver hover:text-white hover:drop-shadow-[0_0_5px_rgba(130,233,255,0.8)] transition-all duration-300 text-sm uppercase tracking-widest">Roadmap</Link>
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className={`transition-all duration-300 text-sm uppercase tracking-widest ${isActive(link.href)
+                                    ? "text-white drop-shadow-[0_0_8px_rgba(130,233,255,0.8)] font-bold border-b border-atrum-cyan pb-1"
+                                    : "text-atrum-silver hover:text-white hover:drop-shadow-[0_0_5px_rgba(130,233,255,0.8)]"
+                                }`}
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
+
                     <Link href="/whitepaper" className="px-6 py-2 rounded-full border border-atrum-pink/50 text-atrum-pink hover:bg-atrum-pink hover:text-white hover:shadow-[0_0_20px_rgba(255,63,183,0.6)] transition-all duration-300 text-sm uppercase tracking-widest font-bold">
                         Whitepaper
                     </Link>
@@ -80,11 +101,19 @@ export default function Navbar() {
                         exit={{ opacity: 0, y: -20 }}
                         className="absolute top-[calc(100%_-_1px)] left-0 w-full glass flex flex-col items-center py-8 gap-6 md:hidden z-40"
                     >
-                        <Link href="/how-it-works" onClick={() => setIsOpen(false)} className="text-atrum-silver hover:text-white text-lg uppercase tracking-widest">How It Works</Link>
-                        <Link href="/tokenomics" onClick={() => setIsOpen(false)} className="text-atrum-silver hover:text-white text-lg uppercase tracking-widest">Tokenomics</Link>
-                        <Link href="/earn-rewards" onClick={() => setIsOpen(false)} className="text-atrum-silver hover:text-white text-lg uppercase tracking-widest">Rewards</Link>
-                        <Link href="/wallet-utility" onClick={() => setIsOpen(false)} className="text-atrum-silver hover:text-white text-lg uppercase tracking-widest">Utility</Link>
-                        <Link href="/vision-roadmap" onClick={() => setIsOpen(false)} className="text-atrum-silver hover:text-white text-lg uppercase tracking-widest">Roadmap</Link>
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                onClick={() => setIsOpen(false)}
+                                className={`text-lg uppercase tracking-widest ${isActive(link.href)
+                                        ? "text-white font-bold drop-shadow-[0_0_5px_rgba(130,233,255,0.8)]"
+                                        : "text-atrum-silver hover:text-white"
+                                    }`}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
                         <Link href="/whitepaper" onClick={() => setIsOpen(false)} className="text-atrum-pink font-bold text-lg uppercase tracking-widest">Whitepaper</Link>
                         <button className="px-8 py-3 rounded-full bg-linear-to-r from-atrum-blue to-atrum-cyan text-black font-bold shadow-[0_0_20px_rgba(130,233,255,0.5)] uppercase tracking-widest">
                             Buy Token
