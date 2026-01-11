@@ -162,7 +162,7 @@ export default function HowItWorksPage() {
                         SUPPORTED <span className="text-atrum-pink">PLATFORMS</span>
                     </motion.h2>
 
-                    <div className="flex flex-wrapjustify-center gap-8 md:gap-16">
+                    <div className="flex flex-wrap justify-center gap-8 md:gap-16">
                         {platforms.map((platform, index) => (
                             <motion.div
                                 key={index}
