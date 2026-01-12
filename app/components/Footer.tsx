@@ -71,27 +71,45 @@ export default function Footer() {
                         <div className="absolute inset-0 bg-linear-to-br from-atrum-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                         <h3 className="font-display font-bold text-xl text-white mb-2 relative z-10">Stay Updated</h3>
-                        <p className="text-gray-400 mb-6 relative z-10">Get the latest ecosystem updates and airdrop alerts.</p>
+                        <p className="text-gray-400 mb-6 relative z-10">
+                            Be the first to know about airdrops, new exchange listings, and platform updates.
+                        </p>
 
                         <form className="space-y-4 relative z-10" onSubmit={(e) => e.preventDefault()}>
-                            <input
-                                type="email"
-                                placeholder="Enter your email address"
-                                className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-atrum-blue transition-colors focus:shadow-[0_0_15px_rgba(26,159,255,0.3)]"
-                            />
+                            <div className="relative">
+                                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" size={18} />
+                                <input
+                                    type="email"
+                                    placeholder="Enter your email"
+                                    className="w-full bg-black/40 border border-white/10 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-atrum-blue transition-colors focus:shadow-[0_0_15px_rgba(26,159,255,0.3)]"
+                                />
+                            </div>
                             <motion.button
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 className="w-full py-4 rounded-xl bg-atrum-blue hover:bg-atrum-blue-light text-black font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(26,159,255,0.4)]"
                             >
-                                Join Community <ArrowRight size={18} />
+                                Subscribe
                             </motion.button>
                         </form>
+
+                        <div className="mt-8 pt-6 border-t border-white/5">
+                            <p className="text-sm text-gray-400 mb-2">Need Help?</p>
+                            <a href="mailto:support@atrum.ac" className="flex items-center gap-2 text-atrum-cyan hover:text-white transition-colors font-bold group">
+                                <Mail size={16} className="group-hover:animate-bounce" /> support@atrum.ac
+                            </a>
+                        </div>
                     </motion.div>
                 </div>
 
-                <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 relative">
-                    <p>&copy; 2026 Atrum Token. All rights reserved.</p>
+                <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-end justify-between text-sm text-gray-500 relative">
+                    <div className="flex flex-col md:text-left text-center gap-2 max-w-lg">
+                        <p className="text-white font-medium">&copy; 2026 Atrum Token. All rights reserved.</p>
+                        <p className="text-xs text-gray-600 leading-relaxed">
+                            Atrum Token is a decentralized utility asset designed for the Atrum ecosystem.
+                            Nothing on this website constitutes financial advice. Cryptocurrency investments carry market risks; please participate responsibly.
+                        </p>
+                    </div>
 
                     <div className="flex flex-wrap justify-center gap-8 mt-6 md:mt-0">
                         <Link href="/privacy-policy" className="hover:text-white transition-colors relative group">

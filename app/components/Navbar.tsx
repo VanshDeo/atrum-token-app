@@ -15,7 +15,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [copied, setCopied] = useState(false);
     const pathname = usePathname();
-    const contractAddress = "0x7c41b1cB7E221885Fb1786805F48794D0E55fA08";
+    const contractAddress = "0xB9a4De588ee2B2A2B17C9F70a85e42FB9e9AC62b";
 
     const copyToClipboard = () => {
         navigator.clipboard.writeText(contractAddress);

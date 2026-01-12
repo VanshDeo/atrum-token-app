@@ -304,11 +304,13 @@ export default function VisionRoadmapPage() {
                         Be part of the next generation of digital ownership. Start your journey with Atrum today and turn your engagement into equity.
                     </p>
 
-                    <button className="group relative px-10 py-5 bg-white text-purple-900 font-bold text-xl rounded-full overflow-hidden hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] transition-all transform hover:-translate-y-1">
-                        <span className="relative z-10 flex items-center gap-3">
-                            Launch App <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                        </span>
-                    </button>
+                    <a href="https://linktr.ee/atrumofficial" target="_blank" rel="noopener noreferrer" className="inline-block">
+                        <button className="group relative px-10 py-5 bg-white text-purple-900 font-bold text-xl rounded-full overflow-hidden hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] transition-all transform hover:-translate-y-1">
+                            <span className="relative z-10 flex items-center gap-3">
+                                Launch App <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                            </span>
+                        </button>
+                    </a>
                 </div>
             </section>
 
