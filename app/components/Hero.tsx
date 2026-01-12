@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, FileText, Sparkles, CircleDollarSign, Zap, Rocket, Star } from "lucide-react";
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
     const { scrollY } = useScroll();
@@ -112,16 +112,18 @@ export default function Hero() {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="flex flex-col sm:flex-row gap-6 justify-center md:justify-start w-full sm:w-auto"
                     >
-                        <motion.button
-                            whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(26,159,255,0.6)" }}
-                            whileTap={{ scale: 0.95 }}
-                            className="group relative px-8 py-4 rounded-full bg-linear-to-br from-atrum-blue to-atrum-cyan text-black font-bold text-lg uppercase tracking-widest overflow-hidden transition-all duration-300"
-                        >
-                            <span className="relative z-10 flex items-center justify-center gap-2">
-                                Contact Us to Join Beta <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                            </span>
-                            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                        </motion.button>
+                        <Link href="https://linktr.ee/atrumofficial" target="_blank" rel="noopener noreferrer">
+                            <motion.button
+                                whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(26,159,255,0.6)" }}
+                                whileTap={{ scale: 0.95 }}
+                                className="group relative px-8 py-4 rounded-full bg-linear-to-br from-atrum-blue to-atrum-cyan text-black font-bold text-lg uppercase tracking-widest overflow-hidden transition-all duration-300"
+                            >
+                                <span className="relative z-10 flex items-center justify-center gap-2">
+                                    Contact Us to Join Beta <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                                </span>
+                                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+                            </motion.button>
+                        </Link>
                     </motion.div>
                 </div>
 

@@ -67,17 +67,15 @@ export default function Navbar() {
                             key={link.href}
                             href={link.href}
                             className={`transition-all duration-300 text-sm uppercase tracking-widest ${isActive(link.href)
-                                    ? "text-white drop-shadow-[0_0_8px_rgba(130,233,255,0.8)] font-bold border-b border-atrum-cyan pb-1"
-                                    : "text-atrum-silver hover:text-white hover:drop-shadow-[0_0_5px_rgba(130,233,255,0.8)]"
+                                ? "text-white drop-shadow-[0_0_8px_rgba(130,233,255,0.8)] font-bold border-b border-atrum-cyan pb-1"
+                                : "text-atrum-silver hover:text-white hover:drop-shadow-[0_0_5px_rgba(130,233,255,0.8)]"
                                 }`}
                         >
                             {link.label}
                         </Link>
                     ))}
 
-                    <Link href="/whitepaper" className="px-6 py-2 rounded-full border border-atrum-pink/50 text-atrum-pink hover:bg-atrum-pink hover:text-white hover:shadow-[0_0_20px_rgba(255,63,183,0.6)] transition-all duration-300 text-sm uppercase tracking-widest font-bold">
-                        Whitepaper
-                    </Link>
+
                     <button className="px-6 py-2 rounded-full bg-linear-to-r from-atrum-blue to-atrum-cyan text-black font-bold hover:shadow-[0_0_20px_rgba(130,233,255,0.8)] transition-all duration-300 text-sm uppercase tracking-widest transform hover:scale-105">
                         Buy Token
                     </button>
@@ -107,14 +105,14 @@ export default function Navbar() {
                                 href={link.href}
                                 onClick={() => setIsOpen(false)}
                                 className={`text-lg uppercase tracking-widest ${isActive(link.href)
-                                        ? "text-white font-bold drop-shadow-[0_0_5px_rgba(130,233,255,0.8)]"
-                                        : "text-atrum-silver hover:text-white"
+                                    ? "text-white font-bold drop-shadow-[0_0_5px_rgba(130,233,255,0.8)]"
+                                    : "text-atrum-silver hover:text-white"
                                     }`}
                             >
                                 {link.label}
                             </Link>
                         ))}
-                        <Link href="/whitepaper" onClick={() => setIsOpen(false)} className="text-atrum-pink font-bold text-lg uppercase tracking-widest">Whitepaper</Link>
+
                         <button className="px-8 py-3 rounded-full bg-linear-to-r from-atrum-blue to-atrum-cyan text-black font-bold shadow-[0_0_20px_rgba(130,233,255,0.5)] uppercase tracking-widest">
                             Buy Token
                         </button>

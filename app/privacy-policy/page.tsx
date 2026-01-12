@@ -48,7 +48,7 @@ export default function PrivacyPolicyPage() {
                         {/* Introduction */}
                         <div>
                             <p className="lead text-xl text-white">
-                                Atrum Technologies Pvt Ltd (“Atrum”, “we”, “our”, or “us”) respects and protects the privacy of our users.
+                                Atrum Token (“we”, “our”, or “us”) respects and protects the privacy of our users.
                                 This Privacy Policy explains how we collect, use, protect, and share information gathered through our platforms,
                                 including <span className="text-atrum-cyan">atrumtoken.com</span>, the Atrum downloader interface, and any site or application linking to this policy (collectively, the “Services”).
                             </p>
@@ -184,7 +184,7 @@ export default function PrivacyPolicyPage() {
                                     <li>Withdraw consent at any time.</li>
                                 </ul>
                             </div>
-                            <p className="mt-4 text-sm text-gray-400">Contact us regarding any privacy rights at <a href="mailto:support@atrumtoken.com" className="text-atrum-cyan">support@atrumtoken.com</a>.</p>
+                            <p className="mt-4 text-sm text-gray-400">Contact us regarding any privacy rights at <a href="mailto:support@atrumtoken.ac" className="text-atrum-cyan">support@atrumtoken.ac</a>.</p>
                         </div>
 
                         {/* 7-9 Misc */}
@@ -212,9 +212,9 @@ export default function PrivacyPolicyPage() {
                             <h2 className="text-2xl font-bold text-white mb-4">11. Contact Us</h2>
                             <p className="text-gray-300 mb-4">For any privacy-specific requests or questions, please reach out to our team:</p>
                             <address className="not-italic text-sm text-atrum-silver">
-                                <strong className="text-white">Atrum Technologies Pvt Ltd</strong><br />
+                                <strong className="text-white">Atrum Token</strong><br />
                                 Attn: Privacy Office<br />
-                                Email: <a href="mailto:support@atrumtoken.com" className="text-atrum-cyan font-bold">support@atrumtoken.com</a>
+                                Email: <a href="mailto:support@atrumtoken.ac" className="text-atrum-cyan font-bold">support@atrumtoken.ac</a>
                             </address>
                         </div>
 

@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Twitter, Youtube, Instagram, Facebook, Mail, ArrowRight, ChevronUp, Send } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
     const scrollToTop = () => {
@@ -23,19 +25,26 @@ export default function Footer() {
 
             <div className="max-w-7xl mx-auto relative z-10">
 
-                <div className="flex flex-col md:flex-row gap-12 mb-20">
-                    {/* Left: Brand & Message */}
-                    <div className="flex-1">
-                        <motion.h2
-                            initial={{ y: 20, opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            className="font-display font-bold text-4xl text-white mb-6 tracking-wide"
+                <div className="flex flex-col md:flex-row gap-12 mb-20 items-center md:items-start">
+                    {/* Left: Brand & Logo */}
+                    <div className="flex-1 flex flex-col items-center md:items-start">
+                        <motion.div
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            whileInView={{ scale: 1, opacity: 1 }}
+                            className="flex items-center gap-4 mb-8"
                         >
-                            ATRUM<span className="text-atrum-blue">TOKEN</span>
-                        </motion.h2>
-                        <p className="text-atrum-silver/70 text-lg mb-8 max-w-md leading-relaxed">
-                            The first decentralized platform where your digital engagement creates real, ownable value.
-                        </p>
+                            <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-atrum-blue/30 shadow-[0_0_30px_rgba(26,159,255,0.3)]">
+                                <Image
+                                    src="/logo.jpg"
+                                    alt="Atrum Logo"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                            <h2 className="font-display font-bold text-5xl md:text-6xl text-white tracking-wide">
+                                ATRUM
+                            </h2>
+                        </motion.div>
 
                         <div className="flex items-center gap-4">
                             {socialLinks.map((social, i) => (
@@ -57,7 +66,7 @@ export default function Footer() {
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        className="flex-1 bg-white/5 rounded-3xl p-8 border border-white/10 backdrop-blur-sm relative group overflow-hidden"
+                        className="flex-1 w-full bg-white/5 rounded-3xl p-8 border border-white/10 backdrop-blur-sm relative group overflow-hidden"
                     >
                         <div className="absolute inset-0 bg-linear-to-br from-atrum-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -82,21 +91,21 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 relative">
-                    <p>&copy; 2026 Atrum Technologies Pvt Ltd. All rights reserved.</p>
+                    <p>&copy; 2026 Atrum Token. All rights reserved.</p>
 
                     <div className="flex flex-wrap justify-center gap-8 mt-6 md:mt-0">
-                        <a href="/privacy-policy" className="hover:text-white transition-colors relative group">
+                        <Link href="/privacy-policy" className="hover:text-white transition-colors relative group">
                             Privacy Policy
                             <span className="absolute left-0 bottom-0 w-0 h-px bg-atrum-cyan transition-all group-hover:w-full"></span>
-                        </a>
-                        <a href="/terms" className="hover:text-white transition-colors relative group">
+                        </Link>
+                        <Link href="/terms" className="hover:text-white transition-colors relative group">
                             Terms & Conditions
                             <span className="absolute left-0 bottom-0 w-0 h-px bg-atrum-pink transition-all group-hover:w-full"></span>
-                        </a>
-                        <a href="/tokenomics" className="hover:text-white transition-colors relative group">
+                        </Link>
+                        <Link href="/tokenomics" className="hover:text-white transition-colors relative group">
                             Tokenomics
                             <span className="absolute left-0 bottom-0 w-0 h-px bg-green-400 transition-all group-hover:w-full"></span>
-                        </a>
+                        </Link>
                     </div>
 
                     <motion.button

@@ -48,7 +48,7 @@ export default function TermsPage() {
                         {/* Header Agreement */}
                         <div className="p-6 bg-pink-900/10 border border-pink-500/20 rounded-2xl">
                             <p className="text-white">
-                                The website located at <span className="text-atrum-cyan">atrumtoken.com</span> (“Site”) is operated by <strong>Atrum Technologies Pvt Ltd</strong> (“Atrum”, “we”, “our”, or “us”).
+                                The website located at <span className="text-atrum-cyan">atrumtoken.com</span> (“Site”) is operated by <strong>Atrum Token</strong> (“we”, “our”, or “us”).
                                 Additional terms may apply to specific features and are incorporated by reference.
                             </p>
                             <div className="mt-4">
@@ -83,7 +83,7 @@ export default function TermsPage() {
                                 <span className="p-2 rounded-lg bg-purple-500/20 text-purple-400"><Shield size={24} /></span>
                                 2. Indemnification
                             </h2>
-                            <p>You agree to defend, indemnify, and hold Atrum Technologies Pvt Ltd harmless from third-party claims arising out of:</p>
+                            <p>You agree to defend, indemnify, and hold Atrum Token harmless from third-party claims arising out of:</p>
                             <ul className="list-disc pl-6 space-y-2 text-gray-300">
                                 <li>Your usage of the Site or Services.</li>
                                 <li>Your violation of these Terms or any Policy.</li>
@@ -179,8 +179,8 @@ export default function TermsPage() {
                             <h2 className="text-2xl font-bold text-white mb-4">11. Contact Information</h2>
                             <p className="text-gray-300 mb-4">For any legal inquiries regarding these terms, please contact us:</p>
                             <address className="not-italic text-sm text-atrum-silver">
-                                <strong className="text-white">Atrum Technologies Pvt Ltd</strong><br />
-                                Support Email: <a href="mailto:support@atrumtoken.com" className="text-atrum-pink font-bold">support@atrumtoken.com</a>
+                                <strong className="text-white">Atrum Token</strong><br />
+                                Support Email: <a href="mailto:support@atrumtoken.ac" className="text-atrum-pink font-bold">support@atrumtoken.ac</a>
                             </address>
                         </div>
 
