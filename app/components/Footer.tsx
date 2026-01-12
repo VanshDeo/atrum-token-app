@@ -44,10 +44,11 @@ export default function Footer() {
                             <h2 className="font-display font-bold text-5xl md:text-6xl text-white tracking-wide">
                                 ATRUM
                             </h2>
-                            <p className="text-gray-400 mt-4 max-w-sm text-sm sm:text-base leading-relaxed">
+                            
+                        </motion.div>
+                        <p className="text-white mt-0 mb-4 ml-4 max-w-sm text-lg font-bold sm:text-base leading-relaxed">
                                 The first decentralized platform where your digital engagement creates real, ownable value.
                             </p>
-                        </motion.div>
 
                         <div className="flex items-center gap-4">
                             {socialLinks.map((social, i) => (
