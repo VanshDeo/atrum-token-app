@@ -44,6 +44,9 @@ export default function Footer() {
                             <h2 className="font-display font-bold text-5xl md:text-6xl text-white tracking-wide">
                                 ATRUM
                             </h2>
+                            <p className="text-gray-400 mt-4 max-w-sm text-sm sm:text-base leading-relaxed">
+                                The first decentralized platform where your digital engagement creates real, ownable value.
+                            </p>
                         </motion.div>
 
                         <div className="flex items-center gap-4">
@@ -105,10 +108,10 @@ export default function Footer() {
                 <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-end justify-between text-sm text-gray-500 relative">
                     <div className="flex flex-col md:text-left text-center gap-2 max-w-lg">
                         <p className="text-white font-medium">&copy; 2026 Atrum Token. All rights reserved.</p>
-                        <p className="text-xs text-gray-600 leading-relaxed">
+                        {/* <p className="text-xs text-gray-600 leading-relaxed">
                             Atrum Token is a decentralized utility asset designed for the Atrum ecosystem.
                             Nothing on this website constitutes financial advice. Cryptocurrency investments carry market risks; please participate responsibly.
-                        </p>
+                        </p> */}
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-8 mt-6 md:mt-0">
