@@ -15,7 +15,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [copied, setCopied] = useState(false);
     const pathname = usePathname();
-    const contractAddress = "0xB9a4De588ee2B2A2B17C9F70a85e42FB9e9AC62b";
+    const contractAddress = "0x02681C68Fd6A951E5d3080e50305Fc4a95D653b5";
 
     const copyToClipboard = () => {
         navigator.clipboard.writeText(contractAddress);
@@ -36,13 +36,13 @@ export default function Navbar() {
     return (
         <div className="absolute top-0 left-0 right-0 z-50 flex flex-col items-center w-full">
             {/* Contract Address Bar */}
-            {/* <div className="w-full bg-linear-to-r from-atrum-dark-start to-atrum-blue/20 backdrop-blur-md border-b border-atrum-blue/10 py-2 text-center text-xs sm:text-sm text-atrum-silver tracking-wider shadow-lg z-51">
+            <div className="w-full bg-linear-to-r from-atrum-dark-start to-atrum-blue/20 backdrop-blur-md border-b border-atrum-blue/10 py-2 text-center text-xs sm:text-sm text-atrum-silver tracking-wider shadow-lg z-51">
                 <span className="opacity-70 mr-2">Contract Address:</span>
                 <span className="font-mono text-atrum-cyan mr-2 select-all">{contractAddress}</span>
                 <button onClick={copyToClipboard} className="hover:text-white transition-colors cursor-pointer inline-flex items-center align-middle">
                     {copied ? <Check size={12} /> : <Copy size={12} />}
                 </button>
-            </div> */}
+            </div>
 
             {/* Main Navbar */}
             <nav className="w-full glass px-6 py-4 flex items-center justify-between mt-0 transition-all duration-300">
