@@ -76,7 +76,7 @@ export default function Navbar() {
                     ))}
 
 
-                    <button className="px-6 py-2 rounded-full bg-linear-to-r from-atrum-blue to-atrum-cyan text-black font-bold hover:shadow-[0_0_20px_rgba(130,233,255,0.8)] transition-all duration-300 text-sm uppercase tracking-widest transform hover:scale-105">
+                    <button onClick={() => window.open("https://web3.binance.com/en-IN/token/bsc/0x02681c68fd6a951e5d3080e50305fc4a95d653b5")} className="px-6 py-2 rounded-full bg-linear-to-r from-atrum-blue to-atrum-cyan text-black font-bold hover:shadow-[0_0_20px_rgba(130,233,255,0.8)] transition-all duration-300 text-sm uppercase tracking-widest transform hover:scale-105">
                         Buy Token
                     </button>
                 </div>
