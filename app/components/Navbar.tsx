@@ -113,7 +113,7 @@ export default function Navbar() {
                             </Link>
                         ))}
 
-                        <button className="px-8 py-3 rounded-full bg-linear-to-r from-atrum-blue to-atrum-cyan text-black font-bold shadow-[0_0_20px_rgba(130,233,255,0.5)] uppercase tracking-widest">
+                        <button onClick={() => window.open("https://web3.binance.com/en-IN/token/bsc/0x02681c68fd6a951e5d3080e50305fc4a95d653b5")} className="px-8 py-3 rounded-full bg-linear-to-r from-atrum-blue to-atrum-cyan text-black font-bold shadow-[0_0_20px_rgba(130,233,255,0.5)] uppercase tracking-widest">
                             Buy Token
                         </button>
                     </motion.div>
